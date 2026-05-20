@@ -17,5 +17,13 @@ def health_check():
         "model_status": model_status
     }
 
-
+@app.post("/predict")
+def predict_premium(user_data: user_input):
+    input_dict = user_data.model_dump()
+    try:
+        prediction_result = predict_insurance_premium(input_dict)
+        return JSONResponse(status_code=200, content={"response": prediction_result})
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+    
 
