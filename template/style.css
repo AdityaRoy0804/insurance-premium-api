@@ -1,0 +1,14 @@
+.header {
+    text-align: center;
+    background-color: bisque;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 20px 450px 20px 450px;
+    padding: 10px;
+    text-shadow: 2px 2px 4px #000000;
+    text-size-adjust: auto;
+}
+
+.content {
+    text-align: justify;
+}
