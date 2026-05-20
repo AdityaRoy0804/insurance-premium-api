@@ -8,4 +8,5 @@ fastapi
 uvicorn
 joblib
 streamlit
-
+python-multipart
+jinja2
