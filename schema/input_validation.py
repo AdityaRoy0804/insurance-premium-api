@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field,computed_field
+from pydantic import BaseModel, Field,computed_field,field_validator
 from typing import Annotated,Literal
 from utils.city_tiers import tier_1_cities,tier_2_cities
 
@@ -16,6 +16,11 @@ class user_input(BaseModel):
     occupation: Annotated[Literal['retired', 'freelancer', 'student', 'government_job',
        'business_owner', 'unemployed', 'private_job'],Field(...,description="Occupation of the person")]
     
+    @field_validator("city")
+    def city_check(cls, value: str) -> str:
+        value = value.strip().title()
+        return value
+    
     @computed_field
     @property
     def bmi(self) -> float:
@@ -23,7 +28,7 @@ class user_input(BaseModel):
     
     @computed_field
     @property
-    def age_group(self):
+    def age_group(self) -> str:
         if self.age < 25:
             return "young"
         elif self.age < 45:
