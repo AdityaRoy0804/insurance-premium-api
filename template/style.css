@@ -1,14 +1,152 @@
-.header {
-    text-align: center;
-    background-color: bisque;
-    border: 2px solid black;
-    border-radius: 5px;
-    margin: 20px 450px 20px 450px;
-    padding: 10px;
-    text-shadow: 2px 2px 4px #000000;
-    text-size-adjust: auto;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    /* Window Background Gradient */
+    background: linear-gradient(135deg, #dbeafe, #e0f2fe, #f0fdf4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Header Section */
+.header {
+    width: 100%;
+    max-width: 720px;
+
+    text-align: center;
+
+    /* Soft Gradient */
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 30px;
+
+    /* Box Shadow */
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15),
+        0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    color: white;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Main Content Container */
 .content {
-    text-align: justify;
+    width: 100%;
+    max-width: 720px;
+
+    /* Soft Elegant Gradient */
+    background: linear-gradient(135deg, #ffffff, #fef9f3);
+
+    border-radius: 20px;
+    padding: 35px;
+
+    /* Elegant Shadow */
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.06);
+
+    backdrop-filter: blur(5px);
+}
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Labels */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+}
+
+/* Inputs & Select Fields */
+input,
+select {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    font-size: 1rem;
+    background-color: #ffffff;
+
+    transition: all 0.3s ease;
+}
+
+/* Input Focus Effect */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #66a6ff;
+
+    box-shadow:
+        0 0 8px rgba(102, 166, 255, 0.4);
+}
+
+/* Submit Button */
+input[type="submit"] {
+    margin-top: 10px;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    padding: 14px;
+
+    transition: all 0.3s ease;
+
+    box-shadow:
+        0 6px 14px rgba(102, 126, 234, 0.35);
+}
+
+/* Hover Effect */
+input[type="submit"]:hover {
+    transform: translateY(-2px) scale(1.01);
+
+    box-shadow:
+        0 10px 18px rgba(102, 126, 234, 0.45);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .header,
+    .content {
+        width: 95%;
+    }
+
+    .header h1 {
+        font-size: 1.7rem;
+    }
+
+    .content {
+        padding: 25px;
+    }
 }

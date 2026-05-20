@@ -12,8 +12,32 @@
     </div>
     <div class = "content">
         <form action = "/predict" method = "post">
-            <label for="age">Age:</label><br>
-            <input type="number" id="age" name="age" required><br><br>
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required="" min="1" max="120" defaultValue="30"><br><br>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" id="weight" name="weight" step="0.1" required="" min="1" defaultValue="70.0"><br><br>
+            <label for="height">Height (m):</label>
+            <input type="number" id="height" name="height" step="0.01" required="" min="0.1" max="2.5" defaultValue="1.75"><br><br>
+            <label for="income_lpa">Income (LPA):</label>
+            <input type="number" id="income_lpa" name="income_lpa" step="0.1" required="" min="0.1" defaultValue="5.0"><br><br>
+            <label for="smoker">Smoker:</label>
+            <select id="smoker" name="smoker" required="">
+                <option value="True">Yes</option>
+                <option value="False">No</option>
+            </select><br><br>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required="" defaultValue="Mumbai"><br><br>
+            <label for="occupation">Occupation:</label>
+            <select id="occupation" name="occupation" required="">
+                <option value="retired">Retired</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="student">Student</option>
+                <option value="government_job">Government Job</option>
+                <option value="business_owner">Business Owner</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="private_job">Private Job</option>
+            </select><br><br>
+            <input type="submit" value="Predict Premium Category">
         </form>
     </div>
 </body>
