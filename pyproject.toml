@@ -13,5 +13,6 @@ dependencies = [
     "pytest>=9.0.3",
     "requests>=2.34.2",
     "scikit-learn>=1.8.0",
+    "streamlit>=1.57.0",
     "uvicorn>=0.47.0",
 ]
