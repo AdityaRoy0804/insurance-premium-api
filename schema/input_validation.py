@@ -25,13 +25,13 @@ class user_input(BaseModel):
     @property
     def age_group(self):
         if self.age < 25:
-            return "Young"
+            return "young"
         elif self.age < 45:
-            return "Adult"
+            return "adult"
         elif self.age < 60:
-            return "Middle-aged"
+            return "middle-aged"
         else:
-            return "Senior"
+            return "senior"
     
     @computed_field
     @property
