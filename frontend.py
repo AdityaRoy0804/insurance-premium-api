@@ -2,7 +2,6 @@
 
 import streamlit as st
 import requests
-import json
 
 # Set the API endpoint
 API_URL = "http://localhost:8000/predict"
