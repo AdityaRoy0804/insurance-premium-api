@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field,computed_field
 from typing import Annotated,Literal
+from utils.city_tiers import tier_1_cities,tier_2_cities
 
 ## take input data for prediction and validate it using pydantic
 # Input : ['age', 'weight', 'height', 'income_lpa', 'smoker', 'city', 'occupation']
