@@ -2,7 +2,7 @@ import joblib
 import pandas as pd
 
 # load the trained model
-model_path = "../model/insurance_premium_model.pkl"
+model_path = "model/insurance_premium_model.pkl"
 with open(model_path, "rb") as f:
     model = joblib.load(f)
 
