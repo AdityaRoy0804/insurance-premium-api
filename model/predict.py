@@ -5,6 +5,12 @@ import pandas as pd
 model_path = "model/insurance_premium_model.pkl"
 with open(model_path, "rb") as f:
     model = joblib.load(f)
+    
+def load_model_check() -> str:
+    if model is None:
+        return "Model not loaded"
+    else:
+        return "Model loaded successfully"
 
 # get classes from the model(for confidence score)
 class_labels = model.classes_.tolist()
