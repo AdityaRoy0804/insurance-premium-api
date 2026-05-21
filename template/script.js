@@ -35,7 +35,7 @@ form.addEventListener("submit", async (e) => {
 
     try {
 
-        const response = await fetch("/api/predict", {
+        const response = await fetch("/api/predict", { // for local development, use "http://localhost:8000/api/predict"
 
             method: "POST",
 
