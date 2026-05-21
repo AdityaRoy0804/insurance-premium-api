@@ -1,32 +1,26 @@
-version: "3.9"
+# First build both the backend and frontend images using the respective Dockerfiles, then use this docker-compose file to run the application.
 
 services:
 
   backend:
-    image: ${DOCKERHUB_USERNAME}/insurance-backend:latest
-    build:
-      context: .
-      dockerfile: Dockerfile.backend
+    image: adityaroy0804/insurance-backend:latest
     container_name: insurance_backend
     restart: unless-stopped
     ports:
-      - "8000:8000"          # Expose directly for health checks / debugging
+      - "8000:8000"
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-      start_period: 20s
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/health || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
 
   frontend:
-    image: ${DOCKERHUB_USERNAME}/insurance-frontend:latest
-    build:
-      context: .
-      dockerfile: Dockerfile.frontend
+    image: adityaroy0804/insurance-frontend:latest
     container_name: insurance_frontend
     restart: unless-stopped
     ports:
-      - "80:80"              # Public HTTP port
+      - "80:80"
     depends_on:
       backend:
         condition: service_healthy
