@@ -1,5 +1,6 @@
 # First build both the backend and frontend images using the respective Dockerfiles, then use this docker-compose file to run the application.
-
+# The tester just needs to run "docker-compose up -d" in the terminal to start both the backend and frontend services.
+# Guide: Install Docker Desktop, put this file in any folder, open terminal in that folder and run docker compose up -d, then open http://localhost"
 services:
 
   backend:
