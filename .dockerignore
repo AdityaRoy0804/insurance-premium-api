@@ -1,0 +1,33 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Dev files
+.vscode/
+.git/
+*.md
+uv.lock
+pyproject.toml
+
+# Notebooks (large)
+model/model_training.ipynb
+
+# Frontend source (not needed by backend)
+template/
+
+# Not needed by frontend
+model/
+schema/
+utils/
+data/
+api.py
+main.py
+frontend.py
+requirements.txt

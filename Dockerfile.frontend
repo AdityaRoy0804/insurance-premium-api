@@ -1,0 +1,16 @@
+FROM nginx:alpine
+
+# Remove default nginx page
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy static frontend files
+COPY template/index.html  /usr/share/nginx/html/index.html
+COPY template/style.css   /usr/share/nginx/html/style.css
+COPY template/script.js   /usr/share/nginx/html/script.js
+
+# Copy custom Nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
