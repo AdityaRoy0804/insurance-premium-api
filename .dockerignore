@@ -19,15 +19,3 @@ pyproject.toml
 # Notebooks (large)
 model/model_training.ipynb
 
-# Frontend source (not needed by backend)
-template/
-
-# Not needed by frontend
-model/
-schema/
-utils/
-data/
-api.py
-main.py
-frontend.py
-requirements.txt
