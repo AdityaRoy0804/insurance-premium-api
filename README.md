@@ -289,9 +289,8 @@ Multi-class classification to predict insurance premium tier: **Low**, **Medium*
 
 | Frontend Form | Prediction Result |
 |---|---|
-| ![form](#) | ![result](#) |
+| ![Frontend Form](screenshots/UI.png) | ![Prediction Result](screenshots/Prediction.png) |
 
-**Live Demo:** `http://<your-ec2-public-ip>` _(update with your deployed URL)_
 
 ---
 
