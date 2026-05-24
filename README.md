@@ -285,7 +285,6 @@ Multi-class classification to predict insurance premium tier: **Low**, **Medium*
 
 ## 🖼️ Screenshots
 
-> _Add screenshots of the frontend UI and prediction results here_
 
 | Frontend Form | Prediction Result |
 |---|---|
